@@ -1,10 +1,10 @@
 .note {
-    background: rgba(207, 135, 0, 0.397);
+    background: rgba(221, 173, 82, 0.397);
     backdrop-filter: blur(5px);
     box-shadow: inset -6px -4px 2px rgba(255, 255, 255, 0.03);
     border-radius: 15px;
-    border: 1.5px solid rgba(255, 255, 255, 0.326);
-    color: #fff;
+    border: 1.5px solid rgba(221, 173, 82, 0.397);
+    color: #000000;
     padding: 15px;
     min-height: 140px;
     display: flex;
@@ -22,7 +22,7 @@
     white-space: pre-wrap;
     background: transparent;
     border: none;
-    color: #fff;
+    color: #000000;
     resize: none;
     font-size: 18px;
 }
@@ -30,22 +30,22 @@
     outline: none;
 }
 .note textarea::placeholder {
-    color: #fff;
+    color: #000000;
 }
 .note__save {
     background: transparent;
     transition: 0.1s ease-in-out;
-    border: 1.5px solid #fff;
+    border: 1.75px solid #000000;
     border-radius: 10px;
-    color: #fff;
+    color: #000000;
     padding: 4px 10px;
     font-size: 13px;
     cursor: pointer;
 }
 .note__save:hover {
-    background: #fff;
-    border: 1.5px solid #fff;
-    color: #4b1589;
+    background: #000000;
+    border: 1.5px solid #000000;
+    color: #ffffff;
 }
 .note__delete {
     cursor: pointer;
@@ -54,6 +54,7 @@
 .note__delete:hover {
     transform: scale(1.1);
 }
-.char__progress {
-    background-color: #fff!important;
+
+h3{
+    display: inline;
 }
