@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './components/css/App.css';
 import Header from './components/noteComponents/header'
 import Notes from './components/noteComponents/notes'
