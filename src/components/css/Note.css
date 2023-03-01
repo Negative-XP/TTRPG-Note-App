@@ -58,3 +58,71 @@
 h3{
     display: inline;
 }
+
+.script {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+/* Hide the default checkbox */
+input[type=checkbox] {
+    visibility: hidden;
+}
+  
+/* creating a custom checkbox based
+    on demand */
+    .checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+}
+  
+/* specify the background color to be
+shown when hovering over checkbox */
+.script:hover input ~  .checkMark{
+    background-color: lightgrey;
+}
+  
+/* specify the background color to be
+shown when checkbox is active */
+.script input:active ~ .checkMark {
+    background-color: Black;
+}
+  
+/* specify the background color to be
+shown when checkbox is checked */
+.script input:checked ~  .checkMark {
+    background-color: black;
+}
+  
+/* checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.checkMark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* display checkmark when checked */
+.script input:checked ~  .checkMark:after {
+    display: block;
+}
+  
+/* styling the checkmark using webkit */
+/* creating a square to be the sign of
+    checkmark */
+.script  .checkMark:after {
+    left: 6px;
+    bottom: 5px;
+    width: 6px;
+    height: 6px;
+    border: solid white;
+    border-width: 4px 4px 4px 4px;
+}

@@ -106,14 +106,19 @@ function Notes() {
         inputText={inputText}
         typeHandler={typeHandler}
       />
-      <h3>General Notes</h3>
-
+     
+      <label class="script">
       <input
         className="input"
         type="checkbox"
         aria-controls={accessibilityIds.checkbox}
         checked={isGeneralCollapseOpen}
         onChange={generalChange} />
+
+
+        
+        <span class="checkMark"></span> <h3>General Notes</h3>
+    </label>
 
       <Collapse isOpened={isGeneralCollapseOpen}>
         <div id={accessibilityIds.checkbox} className="notes">
@@ -131,14 +136,15 @@ function Notes() {
       </Collapse>
 
 
-      <h3>Character Notes</h3>
+     <label className='script'>
       <input
         className="input"
         type="checkbox"
         aria-controls={accessibilityIds.checkbox}
         checked={isCharacterCollapseOpen}
         onChange={characterChange} />
-
+<span class="checkMark"></span> <h3>Character Notes</h3>
+</label>
       <Collapse isOpened={isCharacterCollapseOpen}>
         <div id={accessibilityIds.checkbox} className="notes">
           {notes.filter(x => x.type === 'Character').map((note) => (
@@ -153,14 +159,15 @@ function Notes() {
           ))}
         </div>
       </Collapse>
-      <h3>Location Notes</h3>
+     <label className="script">
       <input
         className="input"
         type="checkbox"
         aria-controls={accessibilityIds.checkbox}
         checked={isLocationCollapseOpen}
         onChange={locationChange} />
-
+<span class="checkMark"></span> <h3>Location Notes</h3>
+</label>
       <Collapse isOpened={isLocationCollapseOpen}>
         <div id={accessibilityIds.checkbox} className="notes">
           {notes.filter(x => x.type === 'Location').map((note) => (
@@ -175,13 +182,17 @@ function Notes() {
           ))}
         </div>
       </Collapse>
-      <h3>Item Notes</h3>
+      <label class="script">
+     
       <input
         className="input"
         type="checkbox"
         aria-controls={accessibilityIds.checkbox}
         checked={isItemCollapseOpen}
         onChange={itemChange} />
+<span class="checkMark"></span> <h3>Item Notes</h3>
+</label>
+
 
       <Collapse isOpened={isItemCollapseOpen}>
         <div id={accessibilityIds.checkbox} className="notes">
@@ -197,8 +208,6 @@ function Notes() {
           ))}
         </div>
       </Collapse>
-
-
 
 
 
