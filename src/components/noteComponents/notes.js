@@ -88,6 +88,7 @@ function Notes() {
 
   const locationChange = useCallback(
     ({ target: { checked } }) => setIsLocationCollapseOpen(checked),
+    
     [setIsLocationCollapseOpen]
   );
 
@@ -98,6 +99,7 @@ function Notes() {
 
   return (
     <div>
+      <div className="float">
       <CreateNote
         titleHandler={titleHandler}
         inputTitle={inputTitle}
@@ -106,8 +108,9 @@ function Notes() {
         inputText={inputText}
         typeHandler={typeHandler}
       />
-     
-      <label class="script">
+      </div>
+     <div style={{paddingTop: '20px'}}>
+      <label className="script">
       <input
         className="input"
         type="checkbox"
@@ -117,7 +120,7 @@ function Notes() {
 
 
         
-        <span class="checkMark"></span> <h3>General Notes</h3>
+        <span className="checkMark"></span> <h3>General Notes</h3>
     </label>
 
       <Collapse isOpened={isGeneralCollapseOpen}>
@@ -143,7 +146,7 @@ function Notes() {
         aria-controls={accessibilityIds.checkbox}
         checked={isCharacterCollapseOpen}
         onChange={characterChange} />
-<span class="checkMark"></span> <h3>Character Notes</h3>
+<span className="checkMark"></span> <h3>Character Notes</h3>
 </label>
       <Collapse isOpened={isCharacterCollapseOpen}>
         <div id={accessibilityIds.checkbox} className="notes">
@@ -159,6 +162,7 @@ function Notes() {
           ))}
         </div>
       </Collapse>
+     
      <label className="script">
       <input
         className="input"
@@ -166,7 +170,7 @@ function Notes() {
         aria-controls={accessibilityIds.checkbox}
         checked={isLocationCollapseOpen}
         onChange={locationChange} />
-<span class="checkMark"></span> <h3>Location Notes</h3>
+<span className="checkMark"></span> <h3>Location Notes</h3>
 </label>
       <Collapse isOpened={isLocationCollapseOpen}>
         <div id={accessibilityIds.checkbox} className="notes">
@@ -182,7 +186,7 @@ function Notes() {
           ))}
         </div>
       </Collapse>
-      <label class="script">
+      <label className="script">
      
       <input
         className="input"
@@ -190,7 +194,7 @@ function Notes() {
         aria-controls={accessibilityIds.checkbox}
         checked={isItemCollapseOpen}
         onChange={itemChange} />
-<span class="checkMark"></span> <h3>Item Notes</h3>
+<span className="checkMark"></span> <h3>Item Notes</h3>
 </label>
 
 
@@ -219,7 +223,7 @@ function Notes() {
 
 
 
-
+      </div>
     </div>
   );
 }

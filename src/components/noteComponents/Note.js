@@ -5,9 +5,9 @@ import { faTrash} from '@fortawesome/free-solid-svg-icons'
 function Note({id,text,deleteNote,type,title}) {
     return(
         <div className='note'>
-            <div className="Title">{title}</div>
+            <div className="Title" style={{fontWeight: 'bold'}}>{title}</div>
             <div className="note__body">{text}</div>
-            <div className="note__footer" style={{justifyContent: 'flex-end'}}>
+            <div className="note__footer" style={{justifyContent: 'space-between'}}>
             <div className="type">{type}</div>
                
          <FontAwesomeIcon icon={faTrash} className='note__delete' onClick={() => deleteNote(id)}></FontAwesomeIcon>

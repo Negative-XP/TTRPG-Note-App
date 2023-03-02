@@ -10,7 +10,7 @@ function CreateNote({
   const charLimit = 100;
   const charLeft = charLimit - inputText.length;
   return (
-    <div className="note" style={{ background: "rgba(255, 255, 255, 0)" }}>
+    <div className="note saveNote" style={{ background: "rgba(255, 255, 255, 0)" }}>
      
       <textarea
         className="Title"
@@ -32,7 +32,7 @@ function CreateNote({
       ></textarea>
 
       <div className="note__footer">
-        <select onChange={typeHandler} type="select">
+        <select className='type' onChange={typeHandler} type="select">
           <option value={"General"}>General</option>
           <option value={"Character"}> Character</option>
           <option value={"Location"}> Location</option>
